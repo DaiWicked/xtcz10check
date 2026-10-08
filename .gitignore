@@ -1,0 +1,180 @@
+# ==============================
+# XTC ND03 逆向项目 .gitignore
+# ==============================
+
+# --- 大镜像文件（不入库，体积过大）---
+*.img
+*.mbn
+*.elf
+*.bin
+*.sparseimg
+*.dat
+*.pak
+
+# --- 压缩包 ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# --- 已解压文件（ai无需读取）---
+已解压文件*/
+已解压文件（ai无需读取）/
+F:/xtcz10check/已解压文件（ai无需读取）/
+
+# --- 第三方工具目录（不入库）---
+edl-master/
+edl_tool/
+iMoo-Toolkit*/
+F:/xtcz10check/iMoo-Toolkit-master/
+
+# --- 中间产物目录（解包/提取/分析临时文件）---
+pyz_extracted/
+extracted/
+deep_check/
+unpack_work/author_boot/ramdisk_extracted/
+unpack_work/author_super/
+unpack_work/*.cpio
+unpack_work/*_decompressed
+unpack_work/debug_*.py
+unpack_work/parse_result.txt
+unpack_work/extent_raw.bin
+unpack_work/fs_check.txt
+unpack_work/extract_log.txt
+unpack_work/lpunpack*.py
+unpack_work/extract_super.py
+
+# --- 大固件目录（全加密/完整镜像，体积过大）---
+ND03-*/
+ND03_V1.0.1/
+v1.0.1/
+2/
+offline-files/
+
+# --- v1.0.1 dump 大文件 ---
+v1.0.1_dump/*.img
+v1.0.1_dump/analysis_result.txt
+v1.0.1_dump/deep_analysis.txt
+
+# --- 指令反馈报告（命令行输出临时记录，不需要入库）---
+fastboot getvar.txt
+使用解锁命令.txt
+devinfo 全写 0xFF.txt
+刷入作者abl.txt
+查看 devinfo.txt
+查看其他分区.txt
+disasm_output.txt
+key_output.txt
+F:/xtcz10check/*.txt
+
+# --- 其他中间产物 ---
+switch.db
+switch_db_模块功能分析.xlsx
+*.db
+*.xlsx
+
+# --- GPT 备份和临时镜像 ---
+gpt_backup*.bin
+*_backup.img
+*_patched.img
+*_modified.img
+vbmeta_flags2.img
+magisk_patched*.img
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- IDE / 编辑器 ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- 临时文件 ---
+*.tmp
+*.temp
+*.log
+*.bak
+*.old
+*.orig
+
+# --- 系统文件 ---
+desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# --- 第三方 AI 分析提示词与复核报告（不入库）---
+给DeepSeek的分析提示词.md
+给DeepSeek的评估提示词*.md
+DeepSeek验证提示词*.md
+DeepSeek复查提示词*.md
+DeepSeek*提示词*.md
+分析报告_DeepSeek复核*.md
+分析报告_*评估_DeepSeek*.md
+分析报告_*交叉验证_DeepSeek*.md
+F:/xtcz10check/分析报告_DeepSeek复核*.md
+F:/xtcz10check/DeepSeek*提示词*.md
+
+# --- Ghidra 反编译导出文件（可重新生成，不入库）---
+分析文件/
+
+# --- devinfo 构造与测试产物（不入库）---
+devinfo_unlocked*.bin
+devinfo_*.img
+tools/make_devinfo*.py
+
+# --- DeepSeek 分析脚本目录（不入库）---
+deep_check/
+
+# --- Ghidra（第三方工具，不入库）---
+ghidra_*/
+ghidra_projects/
+*.gpr
+*.rep/
+
+# --- 解密后的镜像目录（大文件，不入库）---
+decrypted_images/
+
+# --- abl 解压产物（PE32+ 大文件，不入库，但保留脚本）---
+unpacked_abl/*/*.bin
+unpacked_abl/*/*_strings.txt
+unpacked_abl/*/*_info.txt
+
+# --- 工具目录下的临时日志和测试文件 ---
+tools/_*.txt
+tools/_*.py
+tools/*.log
+
+# --- 保留的关键工具脚本（例外规则）---
+!tools/xtc_fw_decrypt.py
+!tools/abl_unpack.py
+!tools/verify_decrypt.py
+
+# --- 保留的关键脚本（例外规则，不忽略）---
+!unpack_work/extract_super2.py
+!unpack_work/unpack_boot.py
+!unpack_work/analyze_vbmeta_v2.py
+!unpack_work/compare_cert_region.py
+!v1.0.1_dump/analyze.py
+!v1.0.1_dump/deep_analyze.py
+!v1.0.1_dump/analyze_abl.py
+!v1.0.1_dump/analyze_abl_deep.py
+!v1.0.1_dump/analyze_abl_layout.py
+!v1.0.1_dump/analyze_vbmeta_struct.py
+!v1.0.1_dump/analyze_boot_vbmeta.py
+!v1.0.1_dump/compare_keys.py
+!v1.0.1_dump/compare_keys2.py
+!v1.0.1_dump/final_compare_keys.py
