@@ -30,6 +30,10 @@ edl_tool/
 iMoo-Toolkit*/
 F:/xtcz10check/iMoo-Toolkit-master/
 
+# --- 参考资料目录（其他设备解锁工具/CVE漏洞利用，不入库）---
+小米civi4/
+CVE-2026-43499/
+
 # --- 中间产物目录（解包/提取/分析临时文件）---
 pyz_extracted/
 extracted/
@@ -122,11 +126,17 @@ System Volume Information/
 DeepSeek验证提示词*.md
 DeepSeek复查提示词*.md
 DeepSeek*提示词*.md
+提示词_*DeepSeek*.md
+提示词_*核查*.md
 分析报告_DeepSeek复核*.md
 分析报告_*评估_DeepSeek*.md
 分析报告_*交叉验证_DeepSeek*.md
+分析报告_*DeepSeek*.md
+分析报告_*核查_DeepSeek*.md
 F:/xtcz10check/分析报告_DeepSeek复核*.md
 F:/xtcz10check/DeepSeek*提示词*.md
+F:/xtcz10check/提示词_*DeepSeek*.md
+F:/xtcz10check/分析报告_*DeepSeek*.md
 
 # --- Ghidra 反编译导出文件（可重新生成，不入库）---
 分析文件/
