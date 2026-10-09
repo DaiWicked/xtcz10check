@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<data>
+    <!-- vbmeta_a (flags=2, 禁用AVB验证) -->
+    <program 
+        SECTOR_SIZE_IN_BYTES="512"
+        filename="vbmeta_v101_flags2.img"
+        label="vbmeta_a"
+        start_sector="1377296"
+        num_partition_sectors="128"
+    />
+
+    <!-- boot_a (Magisk patch) -->
+    <program 
+        SECTOR_SIZE_IN_BYTES="512"
+        filename="boot_v101_magisk.img"
+        label="boot_a"
+        start_sector="1450240"
+        num_partition_sectors="196608"
+    />
+</data>

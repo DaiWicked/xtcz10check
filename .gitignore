@@ -1,8 +1,11 @@
-# ==============================
+# ==============================================================
 # XTC ND03 逆向项目 .gitignore
-# ==============================
+# 分类整理版（按目录结构）
+# ==============================================================
 
-# --- 大镜像文件（不入库，体积过大）---
+# ==============================================================
+# 一、大镜像/二进制文件（通用扩展名，体积过大）
+# ==============================================================
 *.img
 *.mbn
 *.elf
@@ -10,8 +13,11 @@
 *.sparseimg
 *.dat
 *.pak
+*.cpio
 
-# --- 压缩包 ---
+# ==============================================================
+# 二、压缩包
+# ==============================================================
 *.zip
 *.tar
 *.tar.gz
@@ -19,67 +25,102 @@
 *.7z
 *.rar
 
-# --- 已解压文件（ai无需读取）---
-已解压文件*/
-已解压文件（ai无需读取）/
-F:/xtcz10check/已解压文件（ai无需读取）/
-
-# --- 第三方工具目录（不入库）---
-edl-master/
-edl_tool/
-iMoo-Toolkit*/
-F:/xtcz10check/iMoo-Toolkit-master/
-
-# --- 参考资料目录（其他设备解锁工具/CVE漏洞利用，不入库）---
-小米civi4/
-CVE-2026-43499/
-
-# --- 中间产物目录（解包/提取/分析临时文件）---
-pyz_extracted/
-extracted/
-deep_check/
-unpack_work/author_boot/ramdisk_extracted/
-unpack_work/author_super/
-unpack_work/*.cpio
-unpack_work/*_decompressed
-unpack_work/debug_*.py
-unpack_work/parse_result.txt
-unpack_work/extent_raw.bin
-unpack_work/fs_check.txt
-unpack_work/extract_log.txt
-unpack_work/lpunpack*.py
-unpack_work/extract_super.py
-
-# --- 大固件目录（全加密/完整镜像，体积过大）---
+# ==============================================================
+# 三、原始固件包（完整加密固件，体积过大）
+# ==============================================================
 ND03-*/
 ND03_V1.0.1/
 v1.0.1/
 2/
 offline-files/
 
-# --- v1.0.1 dump 大文件 ---
+# ==============================================================
+# 四、解密后的镜像目录（大文件，可重新生成）
+# ==============================================================
+decrypted_images/
+decrypted_v1.0.1/
+decrypted_v2.8.1/
+
+# ==============================================================
+# 五、解包产物目录（可重新生成）
+# ==============================================================
+unpacked_abl/*/*.bin
+unpacked_abl/*/*_strings.txt
+unpacked_abl/*/*_info.txt
+unpacked_xbl/
+pyz_extracted/
+extracted/
+unpack_work/
+
+# ==============================================================
+# 六、dump 产物（设备分区 dump，大文件）
+# ==============================================================
 v1.0.1_dump/*.img
 v1.0.1_dump/analysis_result.txt
 v1.0.1_dump/deep_analysis.txt
+dump_provider/
+logfs.img
+logdump.img
 
-# --- 指令反馈报告（命令行输出临时记录，不需要入库）---
-fastboot getvar.txt
-使用解锁命令.txt
-devinfo 全写 0xFF.txt
-刷入作者abl.txt
-查看 devinfo.txt
-查看其他分区.txt
-disasm_output.txt
-key_output.txt
-F:/xtcz10check/*.txt
+# ==============================================================
+# 七、测试目录（D3 测试等）
+# ==============================================================
+D3_test/
 
-# --- 其他中间产物 ---
-switch.db
-switch_db_模块功能分析.xlsx
-*.db
-*.xlsx
+# ==============================================================
+# 八、第三方工具（不入库）
+# ==============================================================
+# EDL 工具
+edl-master/
+edl_tool/
+edl_tool.zip
 
-# --- GPT 备份和临时镜像 ---
+# Ghidra
+ghidra_*/
+ghidra_projects/
+ghidra_temp*/
+*.gpr
+*.rep/
+
+# ==============================================================
+# 九、logs/ 目录（命令行输出、日志，不入库）
+# ==============================================================
+logs/
+
+# ==============================================================
+# 十、references/ 目录（参考资料，与主线无关，不入库）
+# ==============================================================
+references/
+
+# ==============================================================
+# 十一、reports/ 目录中的 DeepSeek 提示词与报告（不入库，可重新生成）
+# ==============================================================
+reports/提示词_*DeepSeek*.md
+reports/提示词_*核查*.md
+reports/给DeepSeek的*.md
+reports/DeepSeek*提示词*.md
+reports/DeepSeek复查提示词*.md
+reports/DeepSeek验证提示词*.md
+reports/DeepSeek代码审核提示词*.md
+reports/分析报告_*DeepSeek*.md
+reports/分析报告_*核查_DeepSeek*.md
+reports/分析报告_*评估_DeepSeek*.md
+reports/分析报告_*交叉验证_DeepSeek*.md
+reports/分析报告_DeepSeek复核*.md
+
+# ==============================================================
+# 十二、分析文件/中间产物（Ghidra 导出等）
+# ==============================================================
+分析文件/
+deep_check/
+dm_zip_analysis/
+
+# ==============================================================
+# 十三、devinfo 构造与测试产物
+# ==============================================================
+devinfo_unlocked*.bin
+devinfo_*.img
+tools/make_devinfo*.py
 gpt_backup*.bin
 *_backup.img
 *_patched.img
@@ -87,7 +128,17 @@ gpt_backup*.bin
 vbmeta_flags2.img
 magisk_patched*.img
 
-# --- Python ---
+# ==============================================================
+# 十四、数据库/表格
+# ==============================================================
+*.db
+*.xlsx
+switch.db
+switch_db_模块功能分析.xlsx
+
+# ==============================================================
+# 十五、Python 相关
+# ==============================================================
 __pycache__/
 *.pyc
 *.pyo
@@ -98,7 +149,9 @@ __pycache__/
 venv/
 env/
 
-# --- IDE / 编辑器 ---
+# ==============================================================
+# 十六、IDE / 编辑器
+# ==============================================================
 .vscode/
 .idea/
 *.swp
@@ -107,77 +160,63 @@ env/
 .DS_Store
 Thumbs.db
 
-# --- 临时文件 ---
+# ==============================================================
+# 十七、临时文件
+# ==============================================================
 *.tmp
 *.temp
-*.log
 *.bak
 *.old
 *.orig
 
-# --- 系统文件 ---
+# ==============================================================
+# 十八、系统文件
+# ==============================================================
 desktop.ini
 $RECYCLE.BIN/
 System Volume Information/
 
-# --- 第三方 AI 分析提示词与复核报告（不入库）---
-给DeepSeek的分析提示词.md
-给DeepSeek的评估提示词*.md
-DeepSeek验证提示词*.md
-DeepSeek复查提示词*.md
-DeepSeek*提示词*.md
-提示词_*DeepSeek*.md
-提示词_*核查*.md
-分析报告_DeepSeek复核*.md
-分析报告_*评估_DeepSeek*.md
-分析报告_*交叉验证_DeepSeek*.md
-分析报告_*DeepSeek*.md
-分析报告_*核查_DeepSeek*.md
-F:/xtcz10check/分析报告_DeepSeek复核*.md
-F:/xtcz10check/DeepSeek*提示词*.md
-F:/xtcz10check/提示词_*DeepSeek*.md
-F:/xtcz10check/分析报告_*DeepSeek*.md
-
-# --- Ghidra 反编译导出文件（可重新生成，不入库）---
-分析文件/
-
-# --- devinfo 构造与测试产物（不入库）---
-devinfo_unlocked*.bin
-devinfo_*.img
-tools/make_devinfo*.py
-
-# --- DeepSeek 分析脚本目录（不入库）---
-deep_check/
-
-# --- Ghidra（第三方工具，不入库）---
-ghidra_*/
-ghidra_projects/
-*.gpr
-*.rep/
-
-# --- 解密后的镜像目录（大文件，不入库）---
-decrypted_images/
-
-# --- abl 解压产物（PE32+ 大文件，不入库，但保留脚本）---
-unpacked_abl/*/*.bin
-unpacked_abl/*/*_strings.txt
-unpacked_abl/*/*_info.txt
-
-# --- 工具目录下的临时日志和测试文件 ---
+# ==============================================================
+# 十九、工具目录下的临时日志和测试文件
+# ==============================================================
 tools/_*.txt
 tools/_*.py
 tools/*.log
+tools/*.txt
 
-# --- 保留的关键工具脚本（例外规则）---
+# ==============================================================
+# 二十、例外规则（保留的关键脚本和文档）
+# ==============================================================
+
+# 保留的核心文档（根目录）
+!README.md
+!项目报告.md
+!项目状态快照.md
+!.gitignore
+!.gitattributes
+
+# 保留的 reports/ 核心文档（非 DeepSeek 生成）
+!reports/Ghidra分析笔记_abl解锁机制.md
+!reports/Ghidra分析指引_abl解锁机制.md
+!reports/后续研究方向与执行计划.md
+!reports/小天才XML解密算法说明.md
+!reports/ND03解锁镜像对比分析报告.md
+!reports/ND03镜像解包对比分析报告.md
+
+# 保留的 scripts/ 所有脚本和说明
+!scripts/*.py
+!scripts/README.md
+
+# 保留的关键工具脚本
 !tools/xtc_fw_decrypt.py
 !tools/abl_unpack.py
 !tools/verify_decrypt.py
+!tools/xbl_unpack.py
+!tools/find_oem_commands.java
+!tools/find_devinfo_readers.java
+!tools/analyze_unlock_check.java
 
-# --- 保留的关键脚本（例外规则，不忽略）---
-!unpack_work/extract_super2.py
-!unpack_work/unpack_boot.py
-!unpack_work/analyze_vbmeta_v2.py
-!unpack_work/compare_cert_region.py
+# 保留的 v1.0.1_dump 分析脚本
 !v1.0.1_dump/analyze.py
 !v1.0.1_dump/deep_analyze.py
 !v1.0.1_dump/analyze_abl.py

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<data>
+    <!-- vbmeta_a (原版) -->
+    <program 
+        SECTOR_SIZE_IN_BYTES="512"
+        filename="vbmeta_v101.img"
+        label="vbmeta_a"
+        start_sector="1377296"
+        num_partition_sectors="128"
+    />
+
+    <!-- boot_a (原版) -->
+    <program 
+        SECTOR_SIZE_IN_BYTES="512"
+        filename="boot_v101.img"
+        label="boot_a"
+        start_sector="1450240"
+        num_partition_sectors="196608"
+    />
+</data>

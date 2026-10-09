@@ -1,0 +1,37 @@
+=== 作者 boot.img 头部信息 ===
+magic: b'ANDROID!'
+kernel_size: 32695136
+ramdisk_size: 1474300
+page_size: 4096
+header_version: 2
+cmdline: console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a98000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 vmalloc=200M loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 cgroup.memory=nokmem,nosocket xtcsfversion=2.8.1 buildvariant=userdebug
+extra_cmdline: 
+
+=== cmdline 关键参数检查 ===
+  未找到: verifiedbootstate
+  未找到: vbmeta
+  未找到: avb
+  未找到: androidboot.verified
+  未找到: androidboot.vbmeta
+  找到: buildvariant
+  找到: androidboot.hardware
+  未找到: androidboot.bootdevice
+
+=== boot.img SHA256 ===
+  整个boot.img SHA256: 86fd9cdc33993734944d12e51b2e96312218c1e1389e6bdb2a8e8bf30b00d737
+
+=== vbmeta 哈希描述符分析 ===
+  描述符 tag: 16352771443289578958 (0=hash, 1=hashtree, 2=chain)
+  描述符 num_bytes_following: 11921571133964296935
+
+=== vbmeta flags ===
+  flags: 0
+  bit0 (HASHTREE_DISABLED): 0
+  bit1 (VERIFICATION_DISABLED): 0
+  flags=0: AVB验证和verity形式上都开启
+
+=== boot.img 中 AVB 相关检查 ===
+  kernel中未找到 "verifiedbootstate"
+  kernel中找到 "vbmeta" @0x15C8EFC
+  kernel中找到 "avb_" @0x197B60E
+  kernel中未找到 "androidboot.bootdevice"

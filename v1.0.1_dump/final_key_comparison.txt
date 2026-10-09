@@ -1,0 +1,14 @@
+=== 作者 vbmeta 中的 RSA 公钥 ===
+找到 0 个公钥
+
+=== abl 中的 RSA 公钥 ===
+找到 0 个公钥
+
+=== 公钥对比结论 ===
+
+=== vbmeta 中的字符串搜索 ===
+  找到 "XTC" @0x5FD
+  未找到 "General Use"
+  未找到 "xtc"
+  未找到 "imoo"
+  未找到 "careme"

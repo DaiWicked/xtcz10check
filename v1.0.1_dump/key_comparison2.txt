@@ -1,0 +1,13 @@
+vbmeta public_key_offset(relative)=2536, size=1032
+  绝对偏移 @0x9E8: 前4字节=00000000, 以3082开头=False
+  auth_block起始+256 @0xAE8: 前4字节=00000000, 以3082开头=False
+
+=== abl 证书区域中的 RSA 公钥 ===
+
+=== 公钥对比结论 ===
+
+=== 作者vbmeta签名检查 ===
+  signature_offset=32, size=512, abs=0x120
+  签名前32字节: 5ec037f2ac50f86b9ceb9101a26878acdb62ca9085829ca4d164bf9b44b91b18
+  签名全零: False
+  签名非零，看起来是真实的RSA4096签名（512字节）
