@@ -1,6 +1,6 @@
 # ==============================================================
 # XTC ND03 逆向项目 .gitignore
-# 分类整理版（按目录结构）
+# 分类整理版 v2（2026-10-10 更新）
 # ==============================================================
 
 # ==============================================================
@@ -37,7 +37,6 @@ offline-files/
 # ==============================================================
 # 四、解密后的镜像目录（大文件，可重新生成）
 # ==============================================================
-decrypted_images/
 decrypted_v1.0.1/
 decrypted_v2.8.1/
 
@@ -79,7 +78,6 @@ edl_tool.zip
 # Ghidra
 ghidra_*/
 ghidra_projects/
-ghidra_temp*/
 *.gpr
 *.rep/
 
@@ -108,6 +106,8 @@ reports/分析报告_*核查_DeepSeek*.md
 reports/分析报告_*评估_DeepSeek*.md
 reports/分析报告_*交叉验证_DeepSeek*.md
 reports/分析报告_DeepSeek复核*.md
+reports/会话概括_*.md
+reports/操作手册_*DeepSeek*.md
 
 # ==============================================================
 # 十二、分析文件/中间产物（Ghidra 导出等）
@@ -203,6 +203,9 @@ tools/*.txt
 !reports/小天才XML解密算法说明.md
 !reports/ND03解锁镜像对比分析报告.md
 !reports/ND03镜像解包对比分析报告.md
+!reports/分析报告_AllToolBox工具箱分析.md
+!reports/分析报告_EDL文件夹与刷机流程分析.md
+!reports/分析笔记_PILDxe与imagefv装载机制.md
 
 # 保留的 scripts/ 所有脚本和说明
 !scripts/*.py
